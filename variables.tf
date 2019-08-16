@@ -98,3 +98,9 @@ variable "allow_encrypted_uploads_only" {
   default     = false
   description = "Set to `true` to prevent uploads of unencrypted objects to S3 bucket"
 }
+
+variable "additional_bucket_policy_statements" {
+  type        = list(string)
+  default     = []
+  description = "Set this to a list of strings container valid JSON policy statements if you want to add arbitrary additions to the bucket policy"
+}
